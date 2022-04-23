@@ -1,0 +1,56 @@
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  <img src="img/nat-5.jpg" alt="sea">
+  <img src="img/nat-6.jpg" alt="forset">
+  <img src="img/nat-7.jpg" alt="snow">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+
+<div class="grid">
+  <div></div>
+  <div></div>
+</div>
+
+
+ @include grid(4,4,1,1,1);

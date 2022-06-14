@@ -1120,9 +1120,9 @@ body {
 
 .form_box {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   position: absolute;
-  top: 10vh;
+  top: 5vh;
   background-image: url("../../img/nat-10.jpg");
   background-position: right;
 }
@@ -1348,13 +1348,18 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 3rem 0;
+  gap: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .footer {
   height: 120vh;
   background-image: url("../../img/Colored Patterns.svg");
   padding: 15vh 0;
-  margin-bottom: -30vh;
+  margin-top: 10vh;
 }
 
 .footer img {

@@ -1,0 +1,208 @@
+.ph-x{
+opacity: 0;
+}
+
+
+
+
+
+.navigation{
+
+input {
+ display: none;
+
+    &:checked ~ nav  {
+opacity: 1;
+width: 100vw;
+
+    }
+
+    &:checked ~ .navigation__background
+     {
+transform: scale(80);
+    }
+    &:checked ~ label  .ph-x{
+      opacity: 1;
+      position: absolute;
+      left: 50%;
+      top:50%;
+      transform: translate(-50%,-50%) rotate(180deg);
+   
+    
+    }
+    &:checked ~ label .ph-list{
+      left: 50%;
+      top:50%;
+      transform: translate(-50%,-50%) rotate(-180deg);
+      opacity: 0;
+    }
+&:checked ~ nav ul {
+  visibility: visible;
+}
+
+
+
+}
+
+
+
+nav  {
+  
+    height: 90vh;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    opacity: 0;
+  width: 0;
+    transition: all  0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  
+
+ul {
+
+    position: absolute;
+    left: 50%;
+    top:50%;
+visibility: hidden;
+
+  transform: translate(-50%,-50% );
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+
+
+li{
+  width: 40vw;
+  @include mediaquery($breakpoint_1){
+
+    width: 50vw;
+  }
+  @include mediaquery($breakpoint_2){
+    width: 60vw;
+  
+  }
+  @include mediaquery($breakpoint_2){
+    width: 75vw;
+  
+  }
+ 
+}
+ 
+     li a{
+         &:visited, &:link{
+
+        
+         padding: 1rem 2rem; 
+font-size: 3rem;
+font-weight: 400;
+color: white;
+text-transform: uppercase;
+background-image: linear-gradient(120deg,transparent 0%,transparent 50%,white 50%);
+background-size: 220%;
+transition: all .4s;
+display: inline-block;
+     }
+
+
+
+     &:hover, &:active{
+
+        background-position: 100%;
+        color: map-get($map: $colors, $key: "-1") !important;
+        transform: translateX(1rem);
+     }
+
+    }
+    }
+}
+
+
+&__background{
+
+
+border-radius: 50%;
+background-image: radial-gradient(#7ed56f, #28b485);
+transition: transform  .8s cubic-bezier(0.32, 0, 0.67, 0);
+position: fixed;
+height: 6rem;
+width: 6rem;
+top: 6.5rem;
+right: 6.5rem;
+z-index: 1000;
+@include mediaquery($breakpoint_3){
+  height: 5rem;
+width: 5rem;
+top: 5.5rem;
+right: 5.5rem;
+ 
+  }
+
+
+}
+&__button{
+    background-color: white;
+    height: 7rem;
+    width: 7rem;
+    top: 6rem;
+right: 6rem;
+@include mediaquery($breakpoint_3){
+  height: 6rem;
+width: 6rem;
+top: 5rem;
+right: 5rem;
+ 
+  }
+border-radius: 50%;
+position: fixed;
+
+z-index:2000;
+box-shadow: 0 1rem 2rem rgba(map-get($colors,"5"), 0.2);
+    i{
+        color: black !important;
+        font-size: 3rem;
+        position: absolute;
+left: 50%;
+top:50%;
+transform: translate(-50%,-50%);
+
+transition: all .1s;
+cursor: pointer;
+
+
+    }
+  
+}
+
+
+
+
+
+i:hover{
+    font-size: 3.5rem !important ;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

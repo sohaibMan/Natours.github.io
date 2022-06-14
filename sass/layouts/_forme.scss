@@ -1,0 +1,313 @@
+
+.form{
+
+height:100vh;
+
+background-image: linear-gradient(to right,map-get($colors,"1"),map-get($colors,"-1"));
+background-color: palegreen;
+position: relative;
+&_box{
+
+ 
+
+width: 100%;
+height: 100vh;
+position: absolute;
+top:5vh;
+background-image: url("../../img/nat-10.jpg");
+background-position: right;
+
+
+&_container{
+
+    background-color: rgba(255, 255, 255, 0.9);
+  height: 100%;
+  width: 80%;
+  clip-path: polygon(0 0, 100% 0,70% 100%, 0% 100%);
+
+  @include mediaquery($breakpoint_2){
+    clip-path: polygon(0 0, 100% 0,85% 100%, 0% 100%);
+    }
+  @include mediaquery($breakpoint_3){
+    // clip-path: none;
+    clip-path: polygon(0 0, 100% 0,100% 100%, 0% 100%);
+    width: 100%;
+    }
+//! fix the buttons(radios
+
+position: absolute;
+  &_content{
+      position: relative;
+      top:5%;
+
+      left:10%;
+
+
+height: 90%;
+
+width: 60%;
+
+@include mediaquery($breakpoint_2){
+  
+    width:75%;
+    left: 5%;
+    }
+
+    
+@include mediaquery($breakpoint_3){
+  
+    width:90%;
+    left: 5%;
+    }
+
+h3{
+    font-size: 3rem;
+    margin: 4rem 0;
+  
+}
+
+
+  }
+
+}
+}
+
+
+// button{
+//     margin-top: 5rem;
+//     padding: 1rem 1.5rem;
+//     border: none;
+//     background-color: map-get($map: $colors, $key: "-1");
+//     color: white;
+//     font-size: 2rem;
+//     border-radius:3rem;
+//     font-weight: 600;
+//     position: relative;
+    
+//     &::after {
+//         content: "";
+//         display: inline-block;
+//         width: 100%;
+//         height: 100%;
+//         border-radius: 3rem;
+//         position: absolute;
+     
+//         z-index: -1;
+//         left: 0;
+//         top: 0;
+//         transition: all 0.5s;
+//         background-color:  map-get($map: $colors, $key: "-1");
+//       }
+
+//        &:hover::after {
+//        transform: scaleX(1.5) scaleY(1.7);
+//        opacity: 0;
+//       }  
+//       &:hover {
+//         transform: translateY(-0.4rem);
+//         box-shadow: 0 1rem 2rem rgba(map-get($colors,"5"), 0.2);
+//       }
+//       &:active {
+//         box-shadow: 0 0.5rem 1rem rgba(map-get($colors,"5"), 0.164);
+//         transform: translateY(-0.2rem);
+//         /* related to link and visted  */
+//       }
+//       }
+    
+    
+//     .btn--green{
+//     color:map-get($map:$colors , $key: "1") ;
+//     &:not(:hover){
+//       padding: 0 !important;
+//       border-radius: 0 !important;
+//       border-bottom:  1px solid  map-get($map:$colors , $key: "1") ;
+    
+//     }
+
+// }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form_content{
+
+        display: flex;
+     
+        flex-direction: column;
+  
+
+
+      
+      input{
+            width: 100%;
+            padding: 1.2rem;
+            font-size: 1.8rem;
+            font-family: inherit;
+            color: inherit;
+            border: none;
+            background-color: #fdf2e9;
+            border-radius: 9px ;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            
+                margin-bottom: 4vh;
+            
+            &:focus{
+                outline: none;
+                border-radius: 0px ;
+                border-bottom:3px red solid ;
+          
+ 
+            }
+        }
+
+    
+    }
+
+    .radio_area{
+
+display: flex;
+gap:2rem;
+margin-top: 5vh;
+justify-content: flex-start;
+
+div{
+    display: flex;
+    width: 100%;
+
+margin-left: 1rem;
+gap: 1.5rem;
+position: relative;
+align-items: center;
+input{
+    width: 3rem;
+    height: 3rem;
+  opacity: 0;
+
+
+
+}
+
+span{
+
+    width: 1.5rem;
+    height:1.5rem;
+
+   border-radius: 50% !important;
+   position: absolute;
+   
+   left: 0;
+
+   
+   outline: 5px solid map-get($map: $colors, $key:"-1");
+             outline-offset: 5px;
+             z-index: -1;
+
+
+}
+input:checked ~ span {
+  
+
+    background-color: map-get($map: $colors, $key:"-1");
+}
+label{
+    color: map-get($map: $colors, $key: "3");
+    font-size: 2rem;
+}
+
+}
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+/* From cssbuttons.io by @adamgiebl */
+.cssbuttons-io-button {
+    background: #A370F0;
+background:linear-gradient(to right, #7ed56f, #28b485);
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    box-shadow: inset 0 0 1.6em -0.6em map-get($map: $colors, $key:"1");
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+   }
+   
+   .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em map-get($map: $colors, $key:"-1");
+
+    right: 0.3em;
+    transition: all 0.3s;
+   }
+   
+   .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+   }
+   
+   .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #7b52b9;
+   color: map-get($map: $colors, $key:"1");
+   }
+   
+   .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+   }
+   
+   .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+   }
+   
+   .flexcenter{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 3rem 0;
+gap: 1rem;
+flex-direction: column;
+   }

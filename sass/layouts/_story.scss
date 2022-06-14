@@ -1,0 +1,197 @@
+.story{
+    
+    position: relative;
+
+
+&_box{
+ 
+    
+
+    width: 80%;
+    
+@include mediaquery($breakpoint_2){
+  
+    width:75%;
+  
+    }
+    @include mediaquery($breakpoint_3){
+        height: 300vh;
+      width: 80vw;
+    
+      }
+    height: 150vh;
+    padding-bottom: 10vh;
+    margin: 0 auto;
+    padding-top: 10%;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ align-items: center;
+gap: 4rem;
+@include mediaquery($breakpoint_3){
+
+ gap:10rem;
+
+  }
+
+   &_element {
+
+
+
+    @include mediaquery($breakpoint_3){
+
+        &--2box{
+
+padding: 4rem;
+font-size: 2rem;
+        }
+    
+      }
+  
+    display: grid;
+
+ grid-template-columns: 1fr  4fr;
+ @include mediaquery($breakpoint_3){
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+padding: 2rem;
+  
+   height: 100vh;
+   padding: 2rem;
+  }
+ color: map-get($map: $colors, $key:"3" );
+column-gap: 3rem;
+ background-color: rgba(255, 255, 255, 0.507);
+ align-items: center;
+padding: 3rem 3rem;
+transform: skew(-14deg);
+@include mediaquery($breakpoint_3){
+  transform: skew(0deg)
+
+}
+
+font-size: 1.5rem;
+
+
+& > * {
+    transform: skew(14deg);
+    @include mediaquery($breakpoint_3){
+      transform: skew(0deg)
+    
+    }
+
+}
+
+h3{
+    color: map-get($map: $colors, $key:"5" );
+}
+
+ &_img {
+    width:15rem;
+    height: 15rem;
+    
+    shape-outside: circle(50% at 50% 50%);
+    clip-path:circle(50% at 50% 50%);
+    @include mediaquery($breakpoint_3){
+
+        width:20rem;
+        height: 20rem;
+    
+      }
+     img {
+       
+       width: 100%;
+       height: 100%;
+     
+
+    
+     }
+ }
+   }
+}
+
+
+
+
+
+}
+.video{
+  width: 100%;
+
+  object-fit: cover;
+  position: absolute;
+  top:0;
+  left: 0;
+ overflow: hidden;
+ z-index: -1;
+  height: 150vh;
+  overflow: hidden;
+  opacity: .15;
+  @include mediaquery($breakpoint_3){
+
+    height: 300vh;
+
+  }
+}
+
+
+.story_box_element_img{
+
+
+justify-self: center;
+
+    
+    
+}
+
+.hover {
+    &_img{
+        transition: all 0.5s ease-out;
+      
+      
+     img {
+        transform: scale(1.3);
+     }
+    }
+&:hover &_img img{
+    filter:blur(3px);
+    transform: scale(1);
+
+}
+
+position: relative;
+ 
+    &_caption{
+        position: absolute;
+        color: white;
+ 
+  font-size: 1.6rem;
+  font-weight: 700;
+ 
+       
+        opacity: 0;
+       
+        transform:translateX(-50%);
+        text-align: center;
+       bottom: 0;
+    
+       left:50%;
+       transition: all .6s ease-out;
+
+
+    }
+&:hover &_caption{
+    bottom:35%;
+    opacity: 1;
+    
+    transform:translateX(-50%);
+    left:50%;
+
+}
+
+
+}
+
+
+

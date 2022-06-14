@@ -1,0 +1,97 @@
+
+  .heading_primary {
+    text-transform: capitalize;
+    color:map-get($colors, "4");
+    &:hover {
+      text-transform: capitalize;
+  
+      backface-visibility: hidden;
+      /* if we have the shaking of the animation we must use this to hide the sh */
+    }
+    div:nth-child(1) {
+      font-size: 5.3rem;
+
+      @include mediaquery($breakpoint_4){
+        font-size: 4rem;
+        letter-spacing: 2rem;
+        }
+
+
+
+
+      font-weight: 500;
+      letter-spacing: 3rem;
+      /* about the animation */
+  
+      animation-name: camefromleft;
+      animation-duration: 1s;
+      /* animation-delay: 1s;
+    animation-iteration-count: 2000;
+    slow to fast  (how do u want the animation to be in the funciton of the time )  */
+      animation-timing-function: ease-out;
+      margin-bottom: 1rem;
+    }
+    div:nth-child(2) {
+      font-size: 1.8rem;
+      font-weight: 400;
+      @include mediaquery($breakpoint_4){
+        font-size: 1.5rem;
+      letter-spacing: 1rem;
+        }
+
+  
+      letter-spacing: 1.5rem;
+      /* about the animation */
+      animation-name: camefromright;
+      animation-duration: 1s;
+      /* animation-delay: 10s;
+    animation-iteration-count: 2000; */
+    }
+  }
+  .heading_secondary{
+font-size: 2.4rem;
+font-weight: 700;
+text-transform: uppercase;
+background-image: linear-gradient(to right,map-get($colors,"1"),map-get($colors,"-1"));
+display: inline-block;
+// hna atban gha l background f blasat text
+-webkit-background-clip:text;
+//hna an3mloh aibnain ach morah 
+color: transparent;
+transition: all .2s;
+letter-spacing: 2px;
+
+&:hover{
+transform: skewY(2deg) scaleY(1.2); //kaijbado 
+text-shadow: .5rem 2rem 2rem rgba($color: #000000, $alpha: 0.1);
+}
+
+
+  }
+  .heading_tertiary{
+    color: black;
+    @include margin(0,2,0,0);
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+
++ p:not(:last-child) {
+      
+      @include margin(0,3,0,0);
+      font-size: 1.6rem;
+
+  }
+  }
+  body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: map-get($colors, 3);
+    // padding: 3rem;
+
+
+
+ 
+  }

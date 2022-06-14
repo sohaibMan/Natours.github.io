@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/phosphor-icons"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+
+
+      function onSubmit(token) {
+        document.getElementById("form").submit();
+    
+      }
+    
+      
+    </script>
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
@@ -456,14 +467,18 @@
 
 
 
-<div class="flexcenter">
+<div class="flexcenter check_and_submit">
 <!-- to get back add form-btn -->
 
 
 
   <!-- <button class="main_btn">Next step →</button> -->
+  <legend class="g-recaptcha" 
+  data-sitekey="6LdY1m0gAAAAAHLO0mpQkdx5Bgu-YtvGUOL7DZzm" 
+  data-callback='onSubmit' 
+  data-action='submit'>Submit</legend>
 
-  <button class="cssbuttons-io-button"> Next step 
+  <button class="cssbuttons-io-button g-recaptcha">Sign up
     <div class="icon">
       <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
     </div>
@@ -613,7 +628,6 @@
 </div>
 
 </div>
-
 
 
 

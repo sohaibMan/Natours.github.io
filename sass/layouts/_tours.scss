@@ -1,0 +1,367 @@
+
+
+.sect_tours {
+
+
+    h2{
+        ///////
+            margin-top: 25rem;
+        }
+
+        background-color:map-get($colors,"6");
+     
+        margin-top: -20vh;
+        height: 150vh;
+       
+        @include mediaquery($breakpoint_2){
+
+            height: 80*3+7*3 +50vh;
+         
+    
+          }
+       
+        @include mediaquery($breakpoint_4){
+
+            height: 80*3+7*3 +50vh;
+         
+    
+          }
+    
+  
+     
+ 
+}
+.cards{
+
+
+    @include grid(0,0,3,0,5);
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 10rem;
+ 
+    @include mediaquery($breakpoint_1){
+
+        width: 95vw;
+    
+        @include grid(0,0,3,0,1.5);
+     
+
+      }
+
+
+      @include mediaquery($breakpoint_2){
+        @include grid(0,3,1,4,0);
+        width: 50vw;
+  height: 80*3vh;
+    }
+      @include mediaquery($breakpoint_2){
+        @include grid(0,3,1,4,0);
+        width: 60vw;
+
+    }
+
+
+    
+  
+
+}
+.card{
+
+    perspective:100rem;
+    @include mediaquery($breakpoint_2){
+        perspective:150rem;
+    }
+   
+    position: relative;
+  
+    &_side{
+        box-shadow: 0 1.5rem  4rem rgba(map-get($colors,"5"), 0.2);
+        border-radius: 5px;
+        overflow: hidden;
+        height: 75vh;  
+        width: 100%;  
+      
+        transition: all .8s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+backface-visibility: hidden;
+&--front{
+
+    @include grid(0,2,0,0,0); 
+
+
+    &_img {
+         
+      
+  
+        &1{
+
+ 
+            background-image:linear-gradient(map-get($colors,"8")),url("../../img/nat-5.jpg");
+          
+        background-size: cover;
+        
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        
+        background-position: center;
+        
+        position: relative;
+        
+       
+        
+        &::before{ 
+            content:"explorer" ;
+            text-transform: uppercase;
+            color: white;
+             background-color:map-get($colors,"7") ;
+             opacity: .9;
+        
+        
+            
+          
+        
+        
+             display: inline-block;
+                   padding: .5rem 10%;
+                   position: absolute;
+                   font-size: 2rem;
+                   font-weight: 300;
+                   letter-spacing: 1px;
+                 
+            bottom: 6%;
+            right: 7%;
+        
+        
+            }
+            &::after{ 
+                content:"the sea " ;
+                text-transform: uppercase;
+                color: white;
+                 background-color:map-get($colors,"7") ;
+                 display: inline-block;
+                       padding: .5rem 10%;
+                       position: absolute;
+                       font-size: 2rem;
+                       font-weight: 300;
+                       letter-spacing: 1px;
+                       opacity: .8;
+                bottom: 22%;
+                right: 10%;
+                   
+                 
+                }
+                
+        
+        
+        
+        }
+
+        &2{
+            background-image:linear-gradient(map-get($colors,"10")),url("../../img/nat-6.jpg");
+          
+             background-size: cover;
+             height: 90%;
+             background-position: center;
+         position: relative;
+             &::before{ 
+                 content:"hiker" ;
+                 text-transform: uppercase;
+                 color: white;
+                  background-color:map-get($colors,"9") ;
+                  display: inline-block;
+                        padding: .5rem 10%;
+                        position: absolute;
+                        font-size: 2rem;
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                        opacity: .8;
+                 bottom: 4%;
+                 right: 7%;
+             
+             
+                 }
+                 &::after{ 
+                     content:"the forset " ;
+                     text-transform: uppercase;
+                     color: white;
+                      background-color:map-get($colors,"9") ;
+                      display: inline-block;
+                            padding: .5rem 10%;
+                            position: absolute;
+                            font-size: 2rem;
+                            font-weight: 300;
+                            letter-spacing: 1px;
+                            opacity: .8;
+                     bottom: 22%;
+                     right: 10%;
+                        
+                      
+                     }
+                     
+             
+         }
+         &3{
+             background-image:linear-gradient(map-get($colors,"12")),url("../../img/nat-7.jpg");
+             background-size: cover;
+             background-position: center;
+            
+         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+         position: relative;
+         
+         &::before{ 
+             content:"adventurer" ;
+             text-transform: uppercase;
+             color: white;
+              background-color:map-get($colors,"11") ;
+              display: inline-block;
+                    padding: .5rem 10%;
+                    position: absolute;
+                    font-size: 2rem;
+                    font-weight: 300;
+                    letter-spacing: 1px;
+                    opacity: .9;
+             bottom: 5.5%;
+             right: 7%;
+         
+             
+         
+         
+             }
+             &::after{ 
+                 content:"the snow " ;
+                 text-transform: uppercase;
+                 color: white;
+                  background-color:map-get($colors,"11") ;
+                  display: inline-block;
+                        padding: .5rem 10%;
+                        position: absolute;
+                        font-size: 2rem;
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                        opacity: .8;
+                 bottom: 22%;
+                 right: 10%;
+                   
+             
+                 }
+                 
+              
+                 
+                 
+         
+         }
+
+             
+}
+&_desc{
+    padding: 2rem 0rem;
+
+    ul{
+font-size: 1.8rem;
+        list-style: none;
+       gap: 2rem;
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+       color: map-get($colors,"3");
+
+li:not(:last-child){
+border-bottom: 2px solid map-get($colors,"6");
+}
+
+    }
+}
+}
+ 
+     &--back{
+        transform: rotateY(180deg);
+      
+        &1{
+   
+            background-image: linear-gradient(90deg, rgba(249,171,0,1) 0%, rgba(244,159,40,1) 45%);
+          
+        }
+        &2{
+            background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+          
+        }
+        &3{
+            background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+          
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_ul{
+            ////////  
+            color: white;              
+            display: flex;
+            flex-direction: column;
+            
+            text-align: center;
+            gap: 3rem;
+            
+            
+            /////////
+            &_libelle{
+                text-transform: uppercase;
+            ////////
+            font-size: 1.5rem;
+            font-weight: 400;
+            }
+            //////////
+            
+            &_price{
+            
+                font-size: 8rem;
+                font-weight: 200;
+            
+            }
+            
+              ///////////
+            
+            
+            
+                      }
+            
+    }
+
+}
+&:hover &_side--front{
+
+    transform: rotateY(180deg);
+}
+&:hover &_side--back{
+
+    transform: rotateY(0deg);
+}
+
+
+}
+
+.fix{
+    background-color:map-get($colors,"6");
+text-align: center;
+  
+   a{
+    margin: 4rem 0 !important;
+   }
+
+}
+
+
+
+
+
+
+
+
+// #sect_tours_btn{
+//     position: absolute;
+//     right: 50%;
+//     transform: translateX(50%);
+//     bottom: 0;
+// margin: 0;
+// }

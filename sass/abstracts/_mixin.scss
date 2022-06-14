@@ -1,0 +1,134 @@
+
+@mixin container($width) {
+  & div:first-child{
+      margin: 0 auto;
+      width: $width *1vw;
+  } }
+
+
+  // @include container(vw);
+@mixin grid($grid-width,$grid-rows,$grid-columns,$grid-row-gap,$grid-column-gap){
+
+    &{
+        display: grid;
+      
+
+        @if $grid-width != 0
+        
+          {
+   width: $grid-width *1vw;
+
+            }
+        @if $grid-rows != 0
+        
+          {
+             grid-template-rows:repeat($grid-rows,1fr);
+
+            }
+        @if $grid-columns!= 0
+        
+          {
+             grid-template-columns:repeat($grid-columns,1fr);
+
+            }
+        @if $grid-column-gap != 0
+        
+          {
+              column-gap: $grid-column-gap *1rem;
+            }
+        @if $grid-row-gap != 0
+        
+          {
+             row-gap: $grid-row-gap * 1rem;
+
+            }
+        }
+     
+    }
+// @include grid ($grid-width,$grid-rows,$grid-columns,$grid-row-gap,$grid-column-gap)
+// 0 vlalue will be not exucted
+//width  and gap is rem 
+
+
+@mixin flex_to_v {
+flex-direction: column;
+}
+
+
+
+//in rem
+@mixin  flex($flex-gap) {
+  display: flex;
+  gap: $flex-gap*1rem;
+}
+// @include flex(-gap)
+//in rem
+
+@mixin  flex_v($flex-gap) {
+  display: flex;
+  gap: $flex-gap*1rem;
+  @include flex_to_v;
+}
+
+//@include flex_v(-gap)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@mixin margin($margin_top,$margin_bottom,$margin_right,$margin_left){
+    
+  &{
+      // ida 3ta gha top o right za3ma :
+
+      margin-top:$margin_top*1rem  ;
+      margin-bottom:$margin_bottom*1rem  ;
+      margin-right:$margin_right*1rem  ;
+      margin-left:$margin_left*1rem ;  
+  }
+}
+
+//in rem
+//@include margin(, , , )
+
+
+// mediaqery // ! breakpoint with px      16px  = 1 em 1px=1/16em
+@mixin mediaquery($breakpoint) {
+&{
+
+
+
+  @media  screen and  ( max-width:(($breakpoint/16) * 1em))
+  
+  
+  {
+
+
+
+@content
+
+
+
+
+
+    
+  };
+}
+  
+}
+
+
+
+//?uses 
+// 
+
+// @include mediaquery(px){ }

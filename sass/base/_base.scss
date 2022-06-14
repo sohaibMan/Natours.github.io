@@ -1,0 +1,75 @@
+/* global resest  */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body,html{
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
+  width: 100vw;
+}
+
+html {
+  font-size: 62.5%;
+
+
+  /* 1rem =10px */
+ 
+  @include mediaquery($breakpoint_1){
+
+    font-size: 55%;
+
+  }
+  @include mediaquery($breakpoint_2){
+
+    font-size: 50%;
+
+  }
+  @include mediaquery($breakpoint_3){
+
+    font-size: 45%;
+
+  }
+  @include mediaquery($breakpoint_4){
+
+    font-size: 40%;
+
+  }
+  @include mediaquery($breakpoint_5){
+
+    font-size: 35%;
+
+  }
+
+}
+ul{
+ list-style: none;
+}
+a{
+ text-decoration: none;
+}
+.none.btn--green.btn{
+  border: none;
+background-color: transparent !important;
+font-size: 2rem;
+padding: 2rem 3rem;
+border-radius: 2rem;
+
+
+}
+
+body {
+
+width: 100vw !important;
+overflow-x: hidden;
+
+
+}
+.disclaimer{
+display: none !important;
+}

@@ -1,0 +1,82 @@
+//colors:
+$colors :(
+
+    "-1": #28b485, //primary-color-dark
+    "0":#55c57a, //primary-color
+    "1": #7ed56f,  //primary-color-lighter
+    "3": #777,  //grey
+    "4": #fff,//white
+    "5":#000,//black
+    "6":#f7f7f7,//grey light
+    "7":#f08c00,//card color 1
+    "8":#f08c0080,//card color 1 lighter
+    "9":#69db7c,//card color 2
+    "10":#69db7c80,//card color 2 lighter
+    "11":#66d9e8,//card color 3
+    "12":#66d9e880//card color 3 lighter
+  
+    
+  
+    // use map-get($colors,nbofcolor)
+    //for example  color: map-get($colors,"5")
+    
+);
+
+
+// grid variblaes
+
+$grid-width:0;
+$grid-rows:0;
+$grid-columns:0;
+$grid-row-gap:0;
+$grid-column-gap:0;
+//for the container pass to it the width and he will center it and add that width to it in the vw
+$width:0;
+
+//margin
+
+
+$margin_top:0;
+$margin_bottom:0;
+$margin_right:0;
+$margin_left:0;
+
+
+//flex
+$flex-gap:0;
+
+
+
+
+
+
+
+
+
+
+// breakpoints
+$breakpoint:0;
+// $breakpoint_1:1113;
+$breakpoint_1:1000;
+$breakpoint_2:700;
+$breakpoint_3:550;
+$breakpoint_4:400;
+$breakpoint_5:300;
+$breakpoint_6:0;
+$breakpoint_7:0;
+$breakpoint_8:0;
+$breakpoint_9:0;
+$breakpoint_10:0;
+
+
+
+
+
+
+
+
+ 
+
+
+
+

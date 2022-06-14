@@ -1,0 +1,129 @@
+.footer{
+    
+    height:120vh;
+    // background-color: #333;
+    background-image:url("../../img/Colored Patterns.svg");
+    padding: 15vh 0;
+//  margin-bottom: -30vh;;
+margin-top: 10vh;
+
+ 
+img{
+ width: 20%;
+ @include mediaquery($breakpoint_4){
+
+ width: 40%;
+  }
+
+
+}
+&-bottom{
+display: grid;
+gap: 20vw ;
+   gap: 10rem;
+
+@include mediaquery($breakpoint_1){
+    gap: 10vw ;
+
+  }
+
+
+grid-template-columns: 1fr 1fr;
+@include mediaquery($breakpoint_3){
+
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10rem;
+
+    @include mediaquery($breakpoint_4){
+
+ display: flex;
+ flex-direction: column;
+ gap:0;
+
+ margin: 0vh;
+
+      }
+  
+
+  }
+margin: 10vh;
+@include mediaquery($breakpoint_1){
+    margin: 5vh ;
+
+  }
+
+&-part {
+border-top: solid 1px white;
+
+padding: 4vh 0;
+
+color: white;
+}
+
+}
+
+
+
+}
+
+
+
+
+.social-footer{
+&-icons ul{
+
+    display: flex;
+
+    justify-content: space-between;
+  
+a {
+
+    text-decoration: none;
+
+    &:hover{
+        box-shadow: 0 1rem 2rem rgba(map-get($colors,"5"), 0.2);
+    }
+}
+
+i{
+    color:map-get($map: $colors, $key:"0" );
+    font-size: 3rem;
+}
+}
+
+}
+.footer-navigation{
+ ul{
+    display: flex;
+    justify-content: space-between;
+    @include mediaquery($breakpoint_4){
+
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
+      }
+
+  
+ 
+ a {
+
+    text-decoration: none;
+        color:map-get($map: $colors, $key:"0" );
+        font-size: 1rem;
+        @include mediaquery($breakpoint_4){
+
+          font-size: 2rem;
+          }
+      
+       
+    &:hover{
+        box-shadow: 0 1rem 2rem rgba(map-get($colors,"5"), 0.2);
+    }
+
+}
+ }
+
+ }
+  

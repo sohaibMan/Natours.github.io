@@ -1,0 +1,145 @@
+.feature_section{
+    // @include container(100);
+    height: 150vh;
+
+    @include mediaquery($breakpoint_1){
+
+        height: 200vh;
+    
+        margin-bottom: -70vh;
+      }
+      @include mediaquery($breakpoint_4){
+
+     
+        margin-bottom: 0;
+      
+        height: 160vh
+      }
+
+    background-image: linear-gradient(
+        to top,
+    rgba(map-get($colors, "-1"), 0.85),
+    rgba(map-get($colors, "1"), 0.85)),url(../../img/nat-4.jpg);
+    background-position:top;
+    background-size: cover;
+    margin-top: -20vh;
+    clip-path: polygon(0 20vh, 100vw 0, 100vw 130vh,0 150vh);
+    @include mediaquery($breakpoint_4){
+
+     
+        clip-path: none
+      
+      }
+    // clip-path: polygon(0 x, width 0, width 150-x,0 lengh);
+    // transform: skewY(-7deg);
+    //same as skewY
+  
+  
+    position: relative;
+
+
+
+
+
+
+   &_box{
+
+   
+
+
+    
+
+ 
+       @include grid(85,0,4,0,3);
+       
+       
+       @include mediaquery($breakpoint_1){
+
+        @include grid(85,2,2,6,3);
+        top: 35%;
+      
+      }
+       @include mediaquery($breakpoint_4){
+
+        @include grid(85,4,1,6,3);
+        bottom: 0;
+        margin-bottom: 0;
+    
+      }
+       position: absolute;
+       top: 0;
+       left: 50%;
+       top: 50%;
+       transform: translate(-50%, -50%);
+     
+       &:hover &_card:not(:hover){
+      transform: scale(.95);
+     
+
+
+
+       }
+       &_card {
+      
+        text-align: center;
+        border-radius: .5rem;
+        @include flex_v(3);
+        background-color: map-get($map: $colors, $key:"4" );
+        opacity: 0.8;
+        padding: 2.5rem 2rem;
+        box-shadow: 0 1.5rem  4rem rgba(map-get($colors,"5"), 0.4);
+        transition: all 0.5s;
+
+        &:hover{
+            transform: scale(1.1);
+
+            outline:1rem solid map-get($map: $colors, $key:"4" );
+    
+outline-offset: 1rem;
+box-shadow: 0 2.5rem  4rem rgba(map-get($colors,"5"), 0.4);
+
+
+           
+& .feature_section_box_card_title p{
+               
+    background-image: linear-gradient(to right,map-get($colors,"1"),map-get($colors,"-1"));
+    -webkit-background-clip:text;
+    color: transparent;
+ 
+}
+
+
+
+        }
+    
+
+      
+        &_decription p {
+        color:map-get($map: $colors, $key:"3" );
+       font-size: 1.6rem;
+        }
+
+        &_title p {
+            color:map-get($map: $colors, $key:"5" );
+           font-size: 1.5rem;
+           font-weight: 900;
+           text-transform: uppercase;
+       
+
+            }
+    }
+
+
+
+
+
+   }
+   i{
+    //   color:map-get($colors,"0");
+    background-image: linear-gradient(to right,map-get($colors,"1"),map-get($colors,"-1"));
+    -webkit-background-clip:text;
+    color: transparent;
+font-size: 8rem;
+
+   }
+}

@@ -1,0 +1,109 @@
+/* postion animation 
+
+**camefrombottom
+**camefromleft
+**camefromright
+
+
+*/
+
+@keyframes camefrombotoom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  80% {
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+@keyframes camefromleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    opacity: 0.5;
+    transform: translateX(2rem);
+  }
+  100% {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+@keyframes camefromright {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    opacity: 0.5;
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+
+
+// shaking
+
+@keyframes shake {
+  0% {
+
+ transform: rotate(4deg);
+  }
+  80% {
+    transform:rotate(-4deg);
+  }
+
+  100% {
+    
+
+    transform:rotate(0);
+  
+  
+  }
+}
+
+
+//flip card
+// @keyframes flip {
+//   0% {
+// display: none;
+
+//   }
+//   80% {
+//     transform:rotate(-4deg);
+//   }
+
+//   100% {
+    
+
+//     transform:rotate(0);
+  
+  
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+

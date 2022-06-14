@@ -1,0 +1,26 @@
+// importing scss parts
+
+// intialisation
+@import "abstracts/varibales";
+@import "abstracts/functions";
+@import "abstracts/mixin";
+@import "abstracts/tmp";
+
+
+
+@import "base/base";
+@import "base/animation";
+@import "base/typography";
+@import "base/utilties";
+
+
+
+@import "pages/home";
+
+
+
+@import "compenets/compenents";
+@import "compenets/popup";
+
+
+
